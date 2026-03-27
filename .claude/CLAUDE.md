@@ -31,8 +31,7 @@
 | `CLAUDE.md` | AI용 프로젝트 설명서 (이 파일) |
 | `RULES.md` | 초보자용 프로젝트 가이드 & 규칙 |
 | `settings.json` | Claude Code 프로젝트 설정 (권한, 훅, 언어) |
-| `commands/push.md` | `/push` 명령어 — 자동 commit & push 슬래시 커맨드 |
-| `commands/update-docs.md` | `/update-docs` 명령어 — CLAUDE.md 자동 업데이트 |
+| `commands/save.md` | `/save` 명령어 — CLAUDE.md 업데이트 + commit & push 통합 커맨드 |
 
 ### settings.json 주요 설정
 - **언어**: 한국어 응답
@@ -44,8 +43,7 @@
 
 | 명령어 | 설명 |
 |--------|------|
-| `/push` | 변경사항 자동 감지 → commit 메시지 생성 → commit & push |
-| `/update-docs` | 프로젝트 현재 상태를 분석하여 CLAUDE.md 자동 업데이트 |
+| `/save` | CLAUDE.md 자동 업데이트 → 변경사항 commit → push (올인원) |
 
 ## 진행 현황
 
@@ -58,5 +56,4 @@
 - .claude/ 디렉토리 설정 완료 (2026-03-27)
   - `settings.json` 생성 (한국어, 권한, 보안 훅)
   - `.gitignore`에 `settings.local.json` 추가
-  - `/push` 슬래시 커맨드 생성
-  - `/update-docs` 슬래시 커맨드 생성
+  - `/save` 통합 슬래시 커맨드 생성 (CLAUDE.md 업데이트 + commit + push)
