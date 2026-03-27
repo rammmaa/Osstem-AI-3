@@ -20,6 +20,9 @@ Thumbs.db
 *.swp
 *.swo
 
+# Claude Code (개인 설정)
+.claude/settings.local.json
+
 # Jupyter
 .ipynb_checkpoints/
 

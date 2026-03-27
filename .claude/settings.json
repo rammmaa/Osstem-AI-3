@@ -1,0 +1,31 @@
+{
+  "language": "korean",
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(git:*)",
+      "Bash(streamlit:*)",
+      "Bash(ls:*)",
+      "Read",
+      "Glob",
+      "Grep"
+    ],
+    "deny": [
+      "Bash(rm -rf:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "이 파일 변경에 API 키, 비밀번호, 또는 실제 업무 데이터가 하드코딩되어 있는지 확인하세요. .env 파일이 아닌 곳에 ANTHROPIC_API_KEY, ECOS_API_KEY 등의 실제 값이 포함되어 있으면 차단하세요. 환경변수 참조(os.environ, os.getenv, dotenv)는 허용합니다. 변경 내용: $ARGUMENTS"
+          }
+        ]
+      }
+    ]
+  }
+}
