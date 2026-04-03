@@ -57,3 +57,6 @@
   - `settings.json` 생성 (한국어, 권한, 보안 훅)
   - `.gitignore`에 `settings.local.json` 추가
   - `/save` 통합 슬래시 커맨드 생성 (CLAUDE.md 업데이트 + commit + push)
+- 프로젝트 상태 점검 및 CLAUDE.md 동기화 (2026-04-03)
+  - 원격 저장소와 로컬 동기화 확인 (변경사항 없음)
+  - `/save` 커맨드 정상 동작 확인
